@@ -1,4 +1,4 @@
-Daylist — Full-Stack Task Management System
+# Daylist — Full-Stack Task Management System
 
 Organize your day. Manage your tasks. Stay productive.
 
@@ -16,7 +16,7 @@ The current version focuses on the core task management experience, including ta
 
 The long-term vision is to extend the application into a complete productivity platform supporting projects, teams, task assignments, authentication, and collaboration.
 
-Features
+ # Features
 
 Currently Implemented
 
@@ -52,7 +52,7 @@ Calendar integration.
 
 Comments and file attachments.
 
-Notifications.
+# Notifications.
 
 Search, filtering, and pagination.
 
@@ -94,49 +94,56 @@ REST API
 
 Planned frontend/backend communication
 
-Architecture
+ # Architecture
 
 Current Architecture
 
 The current implementation is a frontend-only application. Task data is managed using React state and stored temporarily in memory.
 
-flowchart TD
-    User[User] --> Browser[Web Browser]
-    Browser --> React[React Application]
-    React --> State[React State]
-    State --> UI[Task Management Interface]
-    UI --> User
+<table> 
+        
+    flowchart TD
+        User[User] --> Browser[Web Browser]
+        Browser --> React[React Application]
+        React --> State[React State]
+        State --> UI[Task Management Interface]
+        UI --> User
+    
+</table>
 
 Target Architecture
 
 The planned architecture separates the frontend, backend, and database into independent layers.
 
-flowchart TD
-    User[User] --> Frontend[React Frontend]
-    Frontend -->|HTTP / JSON| API[Laravel REST API]
-    API --> Auth[Authentication & Authorization]
-    API --> Services[Business Logic]
-    Services --> DB[(MySQL Database)]
-    API --> Storage[File Storage]
-    API --> Notifications[Notification System]
-    API -->|JSON Response| Frontend
-
-Project Structure
-
-task-management-system/
-│
-├── frontend/
-│   ├── src/
-│   │   ├── main.jsx
-│   │   └── App.jsx
-│   ├── public/
-│   ├── package.json
-│   └── vite.config.js
-│
-├── backend/             # Planned Laravel application
-│
-└── README.md
-
+<table>
+    
+        flowchart TD
+            User[User] --> Frontend[React Frontend]
+            Frontend -->|HTTP / JSON| API[Laravel REST API]
+            API --> Auth[Authentication & Authorization]
+            API --> Services[Business Logic]
+            Services --> DB[(MySQL Database)]
+            API --> Storage[File Storage]
+            API --> Notifications[Notification System]
+            API -->|JSON Response| Frontend
+</table>
+    
+ # Project Structure
+ <table>
+ 
+    task-management-system/
+     frontend/
+          src/
+             main.jsx
+             App.jsx
+          public/
+          package.json
+          vite.config.js
+      backend/             # Planned Laravel application
+      README.md
+     
+ </table>
+      
 Getting Started
 
 Prerequisites
@@ -151,7 +158,7 @@ Git
 
 1. Clone the Repository
 
-git clone https://github.com/YOUR_USERNAME/task-management-system.git
+git clone https://github.com/SoufainNajmi/task-management-system.git
 
 2. Navigate to the Frontend
 
